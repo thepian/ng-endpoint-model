@@ -115,3 +115,15 @@ To use reserve inventory with your method
     	InventoryModel.reserve('prod-12',1000);
     }
 
+The model will have the following members:
+
+* revise
+* check
+* reserve
+* get
+* results
+
+## Under consideration
+
+1) Add $promise on the model. It is currently only available on the provider
+2) rename `results` to `result`.
