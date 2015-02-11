@@ -123,6 +123,23 @@ The model will have the following members:
 * get
 * results
 
+## Testing your Model
+
+In a simple model you might add a `revise` method along with the configured URL and other constants. You can test the `revise` method by just calling it on the model with sample data, testing that the output is as expected.
+
+If you want to you can also test using the `$httpBackend`, but you probably won't be getting
+any better test coverage.
+
+## Stubbing the Backend
+
+If you haven't implemented the backend yet, but want to get your frontend working; You can set a canned response with the `ModelProvider.stub` and `Model.$stub` methods.
+
+`ModelProvider.stub({ a:'a',b:'b'},100);` will force the model to return the given object after 100ms. (passing it through revise) 
+
+`InventoryModelProvider.stub({location:'central'},{ a11:{amount:55,currency:'eur'} },100);` will force the model to return the second object in response to a `get` with the parameters in the first object after 100ms.
+
+`ModelProvider.stub({});` will force the model to return an empty object after 50ms.
+
 ## Under consideration
 
 1. Add $promise on the model. It is currently only available on the provider
