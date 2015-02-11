@@ -125,5 +125,5 @@ The model will have the following members:
 
 ## Under consideration
 
-1) Add $promise on the model. It is currently only available on the provider
-2) rename `results` to `result`.
+1. Add $promise on the model. It is currently only available on the provider
+2. rename `results` to `result`.
